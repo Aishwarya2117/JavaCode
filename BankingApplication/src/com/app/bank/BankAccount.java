@@ -81,6 +81,36 @@ public class BankAccount {
 		this.balance = balance;
 	}
 	 
+	 	 public boolean equals(Object o) {
+		 System.out.println("In acco{unts equals");
+		 
+		 if(o instanceof BankAccount) {
+			 return this.accNo==((BankAccount)o).accNo;
+		 }
+		return false;
+		 
+	 }
+	 
+	 public  double deposite(double amount){
+		  this.balance +=amount;
+		  return balance;
+		 
+	 }
+	 
+	 public double withDrwa(double amount)throws BankingException{
+		 
+		 validateBalance(this.acType,balance-amount);
+		 
+			this.balance-=amount;
+			return balance;
+			
+     }
+
+	 public void transferFunds(BankAccount dest,double amount) throws BankingException{
+		 
+		 this.withDrwa(amount);
+		 dest.deposite(amount);
+	 }
 	 
 
 }
