@@ -46,7 +46,13 @@ public class BankingApp {
         		break;
         	
         	
-        	case 3:exit=true;
+        	case 3: System.out.println("Getting Account details by account number");
+        	  System.out.println("Enter account number");
+        	  BankAccount acc=getAccountByAccNo(sc.nextInt(),account);
+        	  System.out.println(acc);
+        	break;
+				
+			case 0:exit=true;
         	break;
         	
         		
