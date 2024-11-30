@@ -65,9 +65,34 @@ public class BankingApp {
 						   System.out.println("Withdrawed successfully!!!!");
 						   break;
         	
+<<<<<<< HEAD
         	case 0:exit=true;
-        	break;
+=======
         	
+        	case 3: System.out.println("Getting Account details by account number");
+        	  System.out.println("Enter account number");
+        	  BankAccount acc=getAccountByAccNo(sc.nextInt(),account);
+        	  System.out.println(acc);
+>>>>>>> 238c6609f3efc101d91180a2def6123d3318ca5a
+        	break;
+				
+			case 0:exit=true;
+        	break;
+        	case 4: System.out.println("Deposite amount in account");
+	        System.out.println("enter a bank account in which u wNt to deposite");
+	            BankAccount add=getAccountByAccNo(sc.nextInt(), account);
+	            System.out.println("Enter amount to be deposite");
+	        add.deposite(sc.nextInt());
+	        System.out.println("Deposited amount successfully!!!!");
+           break;
+        		
+        	case 5: System.out.println("Withdraw amount from account");
+        	          System.out.println("Enter accNo from which u want to withrow amount");
+        	           BankAccount w=getAccountByAccNo(sc.nextInt(), account);
+        	           System.out.println("Enter amount to be withdrawed");
+        	           w.withDrwa(sc.nextDouble());
+        	           System.out.println("Withdrawed successfully!!!!");
+        	           break;
         		
         	   
         		

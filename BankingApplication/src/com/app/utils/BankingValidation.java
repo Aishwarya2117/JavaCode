@@ -50,4 +50,14 @@ public class BankingValidation {
 		}
 		
 	}
+	public static BankAccount getAccountByAccNo(int accNo,BankAccount[]account)throws BankingException{
+		
+		for(BankAccount Ac:account) {
+			
+			if(Ac!=null  && Ac.getAccNo()==accNo) 
+				return Ac;
+				
+		}
+			throw new BankingException("Bank account not avaiable!!!");
+		
 }
