@@ -17,6 +17,8 @@ public class MapInJava {
        map.putIfAbsent("d", 10);
        map.putIfAbsent("e", 50);
        System.out.println(map);
+       System.out.println( map.containsKey("a"));
+       System.out.println( map.containsValue(60));
 	}
 
 }
