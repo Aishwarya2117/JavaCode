@@ -1,14 +1,14 @@
 package generic;
 
-public class Holder {
- private Object ref;
+public class Holder<T> {
+ private T ref;
  
- public Holder(Object ref) {
+ public Holder(T ref) {
 	 super();
 	 this.ref=ref;
  }
 
-public Object getRef() {
+public T getRef() {
 	return ref;
 }
 }
